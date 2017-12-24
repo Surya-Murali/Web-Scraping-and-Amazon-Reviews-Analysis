@@ -6,7 +6,6 @@ pacman::p_load(XML, dplyr, stringr, rvest, audio)
 
 # Creating a trim function to remove all white spaces
 trim <- function (x) gsub("^\\s+|\\s+$", "", x)
-trim
 
 #Initialising the product code of the product you want to examine 
 #View the product in Amazon, get the product code from its URL. It looks something like this: B073HCFZM7
@@ -95,4 +94,3 @@ worst_reviews
 #Highlight the bottom 3 reviews by sentiment polarity (positive = green; negative = pink) as an html file.
 highlight(sentiment_by(worst_reviews$comments))
 #with(worst_reviews, sentiment_by(comments)) %>% highlight()
-
