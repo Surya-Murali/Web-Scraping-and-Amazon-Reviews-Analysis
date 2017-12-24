@@ -43,36 +43,36 @@ analyseReviews <- function(prod_code, pages = 2){
   sent_agg <- with(reviews_all, sentiment_by(comments))
   
   #Plot the histogram of the stars / ratings given by the customers
-#(Rating is between 0 to 5)
-#x <- hist(reviews_all$stars)
-with(reviews_all, hist(stars))
+  #(Rating is between 0 to 5)
+  #x <- hist(reviews_all$stars)
+  with(reviews_all, hist(stars))
 
-#Plot the histogram of the average sentiment scores for the reviews
-#y <- hist(reviews_all$ave_sentiment)
-with(sent_agg, hist(ave_sentiment))
+  #Plot the histogram of the average sentiment scores for the reviews
+  #y <- hist(reviews_all$ave_sentiment)
+  with(sent_agg, hist(ave_sentiment))
 
-#Get the mean rating of the product
-mean(reviews_all$stars)
+  #Get the mean rating of the product
+  mean(reviews_all$stars)
 
-#Get the mean sentiment score of the product
-#Higher the sentiment score, more positive are the reviews
-mean(sent_agg$ave_sentiment)
+  #Get the mean sentiment score of the product
+  #Higher the sentiment score, more positive are the reviews
+  mean(sent_agg$ave_sentiment)
 
-#Create a subset of the top 3 reviews as 'best_reviews' based on the sentiment score
-best_reviews <- slice(reviews_all, top_n(sent_agg, 3, ave_sentiment)$element_id)
-best_reviews
+  #Create a subset of the top 3 reviews as 'best_reviews' based on the sentiment score
+  best_reviews <- slice(reviews_all, top_n(sent_agg, 3, ave_sentiment)$element_id)
+  best_reviews
 
-#Highlight the top 3 reviews by sentiment polarity (positive = green; negative = pink) as an html file.
-highlight(sentiment_by(best_reviews$comments))
-#with(best_reviews, sentiment_by(comments)) %>% highlight()
+  #Highlight the top 3 reviews by sentiment polarity (positive = green; negative = pink) as an html file.
+  highlight(sentiment_by(best_reviews$comments))
+  #with(best_reviews, sentiment_by(comments)) %>% highlight()
 
-#Create a subset of the bottom 3 reviews as 'worst_reviews' based on the sentiment score
-worst_reviews <- slice(reviews_all, top_n(sent_agg, 3, -ave_sentiment)$element_id)
-worst_reviews
+  #Create a subset of the bottom 3 reviews as 'worst_reviews' based on the sentiment score
+  worst_reviews <- slice(reviews_all, top_n(sent_agg, 3, -ave_sentiment)$element_id)
+  worst_reviews
 
-#Highlight the bottom 3 reviews by sentiment polarity (positive = green; negative = pink) as an html file.
-highlight(sentiment_by(worst_reviews$comments))
-#with(worst_reviews, sentiment_by(comments)) %>% highlight()
+  #Highlight the bottom 3 reviews by sentiment polarity (positive = green; negative = pink) as an html file.
+  highlight(sentiment_by(worst_reviews$comments))
+  #with(worst_reviews, sentiment_by(comments)) %>% highlight()
 }
 
 analyseReviews("B00AFTT7IW", 5)
