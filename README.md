@@ -7,6 +7,6 @@ Before you buy any product on Amazon, get the Product ID and run this code to fi
 The code can be found [here.](https://github.com/Surya-Murali/Web-Scraping-and-Amazon-Reviews-Analysis/blob/master/AmazonReviewsAnalysis.R)
 
 **Note :** 
-* The Product ID can be got from [Amazon's URL](https://github.com/Surya-Murali/Web-Scraping-and-Amazon-Reviews-Analysis/blob/master/Getting_the_ID_from_the_URL.jpg)
-* This project becomes extremely useful if you have over 100 reviews
+* The Product ID can be taken from [Amazon's URL](https://github.com/Surya-Murali/Web-Scraping-and-Amazon-Reviews-Analysis/blob/master/Getting_the_ID_from_the_URL.jpg)
+* This project becomes extremely useful if the product has 30+ reviews which is more than likely for most products
 * The Outputs would look something like [this!](https://github.com/Surya-Murali/Web-Scraping-and-Amazon-Reviews-Analysis/tree/master/Outputs)
