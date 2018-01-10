@@ -1,6 +1,6 @@
 # Web-Scraping-and-Amazon-Reviews-Analysis
 
-This is a Web Scraping project to analyze the reviews of products in Amazon.com. Once you input the ID of the product and the number of pages of reviews you want to scrape, the best and the worst reviews are identified based on their sentiment scores. They are highlighted in green and red (for positive and negative reviews respectively) and shown in an HTML. The mean rating for the product and the overall average sentiment score of the product is also revealed.
+This is a Web Scraping project to analyze the reviews of products in Amazon.com. Once you input the ID of the product and the number of pages of reviews you want to scrape, the best and the worst reviews are identified based on their sentiment scores. They are highlighted in green and red (for positive and negative reviews respectively) and shown in an HTML format. The mean rating for the product and the overall average sentiment score of the product is also revealed.
 
 Before you buy any product on Amazon, get the Product ID and run this code to find out the reviews that would actually interest you! :D 
 
