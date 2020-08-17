@@ -146,8 +146,8 @@ amazon_scraper <- function(doc, reviewer = T, delay = 0){
                      rver_url, rver_avgrating_10, rver_numrev, rver_numhelpful, rver_rank, stringsAsFactors = F)
     
   } #else df <- data.frame(title, author, date, ver.purchase, format, stars, comments, helpful, stringsAsFactors = F)
-    # Removing author, helpful from the dataframe. (Solving the Error in data.frame(title, author, date, ver.purchase, format, stars,  arguments imply differing number of rows problem) 
-    # Amazon.com changed the HTML code of the reviews page. Due to different HTML nodes, this script to extract author, and helpful votes did not work
+    # Removing 'author', 'helpful' from the dataframe. (Resolving the open issue: Error in data.frame(title, author, date, ver.purchase, format, stars,  arguments imply differing number of rows) 
+    # Amazon.com had changed the HTML code of the reviews page. Due to different HTML nodes, this script to extract author, and helpful votes did not work
     # I added the right HTML tags in the code, but still removed them from the data frame
     else df <- data.frame(title, date, ver.purchase, format, stars, comments, stringsAsFactors = F)
   
